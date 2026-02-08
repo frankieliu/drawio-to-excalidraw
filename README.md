@@ -25,6 +25,25 @@ npx drawio-to-excalidraw <input-directory> <output.excalidrawlib>
 
 ## Quick Start
 
+### Getting Draw.io Stencils
+
+First, you need the draw.io stencils XML files. Clone the draw.io repository:
+
+```bash
+# Clone draw.io repository (includes submodule with stencils)
+git clone --recursive https://github.com/jgraph/drawio-desktop.git
+
+# Or if already cloned without --recursive:
+cd drawio-desktop
+git submodule update --init --recursive
+```
+
+**Stencils Location:** `drawio-desktop/drawio/src/main/webapp/stencils/`
+
+This directory contains 200+ XML files organized by category:
+- **Root level:** `basic.xml`, `flowchart.xml`, `arrows.xml`, `aws4.xml`, `azure.xml`, `gcp2.xml`, etc.
+- **Subdirectories:** `electrical/`, `cisco/`, `aws/`, `aws2/`, `gcp/`, `office/`, `rack/`, etc.
+
 ### Convert XML to SVG
 
 ```bash
@@ -50,11 +69,14 @@ node xml-to-excalidraw.js ./xml-stencils/ output.excalidrawlib
 ### Example 1: Convert Basic Shapes
 
 ```bash
-# Clone draw.io repository first
-git clone --recursive https://github.com/jgraph/drawio-desktop.git
+# After cloning drawio-desktop repository
+# Stencils are located at: drawio-desktop/drawio/src/main/webapp/stencils/
 
 # Convert all basic shapes
-drawio-to-excalidraw drawio-desktop/drawio/src/main/webapp/stencils basic-shapes.excalidrawlib
+drawio-to-excalidraw drawio-desktop/drawio/src/main/webapp/stencils/basic.xml basic-shapes.excalidrawlib
+
+# Or convert entire stencils directory (8,746+ shapes)
+drawio-to-excalidraw drawio-desktop/drawio/src/main/webapp/stencils complete-library.excalidrawlib
 ```
 
 ### Example 2: Convert Specific Category
@@ -85,20 +107,61 @@ drawio-to-svg drawio-desktop/drawio/src/main/webapp/stencils/flowchart.xml flowc
 
 When converting the full draw.io stencils library, you get access to:
 
-- **Basic Shapes**: Stars, arrows, callouts, banners
-- **Flowcharts**: Process, decision, database, document symbols
-- **AWS**: All AWS service icons (multiple versions)
-- **Azure**: Microsoft Azure cloud services
-- **GCP**: Google Cloud Platform icons
-- **Cisco**: Network equipment and diagrams
-- **Electrical**: Circuit symbols and electronic components
-- **UML**: Unified Modeling Language diagrams
-- **BPMN**: Business Process Model and Notation
-- **Network**: Racks, cabinets, network topology
-- **Floor Plans**: Architectural symbols
-- **And many more...**
+**Cloud Platforms:**
+- `aws3.xml`, `aws3d.xml`, `aws4.xml` - Amazon Web Services (multiple versions)
+- `aws/`, `aws2/` - Additional AWS shape collections
+- `azure.xml` - Microsoft Azure
+- `gcp2.xml`, `gcp/` - Google Cloud Platform
+- `alibaba_cloud.xml` - Alibaba Cloud
+- `ibm.xml`, `ibm_cloud.xml` - IBM Cloud
+- `openstack.xml` - OpenStack
 
-Total: **8,746+ shapes** available!
+**Network & Infrastructure:**
+- `cisco19.xml`, `cisco/`, `cisco_safe/` - Cisco networking equipment
+- `networks.xml`, `networks2.xml` - Network diagrams
+- `rack/` - Server racks and data center equipment
+- `cabinets.xml` - Cabinet diagrams
+
+**Software & Diagrams:**
+- `flowchart.xml` - Flowchart symbols
+- `basic.xml` - Basic geometric shapes
+- `arrows.xml` - Various arrow styles
+- `bpmn.xml` - Business Process Model and Notation
+- `uml.xml` - Unified Modeling Language
+- `kubernetes.xml`, `kubernetes2.xml` - Kubernetes icons
+- `eip.xml` - Enterprise Integration Patterns
+
+**Mobile & Web:**
+- `ios7/`, `android/` - Mobile UI elements
+- `mockup/` - UI mockup components
+- `bootstrap.xml` - Bootstrap UI elements
+- `webicons.xml`, `weblogos.xml` - Web icons and logos
+- `gmdl.xml` - Google Material Design
+
+**Enterprise:**
+- `atlassian.xml` - Atlassian products
+- `salesforce.xml` - Salesforce
+- `citrix.xml`, `citrix2.xml` - Citrix
+- `veeam/` - Veeam backup solutions
+- `office/` - Microsoft Office shapes
+
+**Engineering:**
+- `electrical/` - Electrical and electronic symbols (20+ subcategories)
+- `fluid_power.xml` - Hydraulic and pneumatic symbols
+- `pid/` - Piping and Instrumentation Diagrams
+
+**Other:**
+- `floorplan.xml` - Architectural floor plans
+- `lean_mapping.xml` - Lean manufacturing
+- `signs/` - Safety and informational signs
+- `sitemap.xml` - Website sitemap symbols
+- `clipart/` - General clipart
+- `mscae/` - Microsoft Cloud and Enterprise
+- `vvd.xml` - VMware Validated Design
+
+**Path:** All stencils are located at `drawio-desktop/drawio/src/main/webapp/stencils/`
+
+Total: **8,746+ shapes** available across **200+ XML files**!
 
 ## Command Line Options
 
