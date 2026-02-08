@@ -126,9 +126,10 @@ node xml-to-excalidraw.js <input-directory> <output.excalidrawlib>
 
 ## Documentation
 
-- [API Documentation](./docs/API.md)
-- [Architecture](./docs/ARCHITECTURE.md)
-- [Contributing](./docs/CONTRIBUTING.md)
+- [Usage Guide](./docs/USAGE.md) - Detailed examples and use cases
+- [API Documentation](./docs/API.md) - API reference and code examples
+- [Architecture](./docs/ARCHITECTURE.md) - Technical architecture overview
+- [Contributing](./docs/CONTRIBUTING.md) - Contribution guidelines
 
 ## Examples
 
