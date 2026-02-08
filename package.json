@@ -3,14 +3,14 @@
 	"version": "1.0.0",
 	"description": "Convert draw.io XML stencils to SVG and Excalidraw library format",
 	"type": "module",
-	"main": "xml-to-excalidraw.js",
+	"main": "stencil-to-excalidrawlib.js",
 	"bin": {
 		"drawio-to-svg": "./xml-to-svg.js",
-		"drawio-to-excalidraw": "./xml-to-excalidraw.js"
+		"drawio-to-excalidraw": "./stencil-to-excalidrawlib.js"
 	},
 	"scripts": {
 		"xml-to-svg": "node xml-to-svg.js",
-		"xml-to-excalidraw": "node xml-to-excalidraw.js"
+		"stencil-to-excalidraw": "node stencil-to-excalidrawlib.js"
 	},
 	"keywords": [
 		"drawio",

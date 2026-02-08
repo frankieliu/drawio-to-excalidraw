@@ -58,10 +58,10 @@ node xml-to-svg.js input.xml output.svg
 
 ```bash
 # Using the CLI
-drawio-to-excalidraw ./xml-stencils/ output.excalidrawlib
+drawio-to-excalidraw basic arrows flowchart
 
 # Using Node
-node xml-to-excalidraw.js ./xml-stencils/ output.excalidrawlib
+node stencil-to-excalidrawlib.js basic arrows flowchart
 ```
 
 ### Convert Specific Stencil Categories
@@ -86,20 +86,21 @@ node stencil-to-excalidrawlib.js basic --output=./my-libraries
 # Stencils are located at: drawio-desktop/drawio/src/main/webapp/stencils/
 
 # Convert all basic shapes
-drawio-to-excalidraw drawio-desktop/drawio/src/main/webapp/stencils/basic.xml basic-shapes.excalidrawlib
+drawio-to-excalidraw basic
 
 # Or convert entire stencils directory (8,746+ shapes)
-drawio-to-excalidraw drawio-desktop/drawio/src/main/webapp/stencils complete-library.excalidrawlib
+# Note: Use individual categories for better control
+drawio-to-excalidraw all
 ```
 
 ### Example 2: Convert Specific Category
 
 ```bash
-# Convert only AWS shapes
-drawio-to-excalidraw drawio-desktop/drawio/src/main/webapp/stencils/aws aws-shapes.excalidrawlib
+# Convert flowchart shapes
+drawio-to-excalidraw flowchart
 
-# Convert only network diagrams
-drawio-to-excalidraw drawio-desktop/drawio/src/main/webapp/stencils/cisco cisco-shapes.excalidrawlib
+# Convert arrows
+drawio-to-excalidraw arrows
 ```
 
 ### Example 3: Convert Single File to SVG
@@ -234,15 +235,17 @@ node xml-to-svg.js <input.xml> [output.svg]
 
 If the XML contains multiple shapes, creates multiple SVG files with pattern: `output_0_ShapeName.svg`
 
-### xml-to-excalidraw.js
+### stencil-to-excalidrawlib.js
 
 ```bash
-node xml-to-excalidraw.js <input-directory> <output.excalidrawlib>
+node stencil-to-excalidrawlib.js [categories...] [--output=DIR]
 ```
 
 **Arguments:**
-- `input-directory` - Directory containing XML stencil files (searched recursively)
-- `output.excalidrawlib` - Output Excalidraw library file path
+- `categories` - One or more category names (basic, arrows, flowchart) or 'all'
+- `--output=DIR` - (Optional) Output directory (default: ./excalidraw-libraries)
+
+See the stencil categories section above for full usage details.
 
 ## Documentation
 
@@ -276,7 +279,7 @@ npm install
 npm test
 
 # Run converter
-node xml-to-excalidraw.js <input-dir> <output-file>
+node stencil-to-excalidrawlib.js basic arrows flowchart
 ```
 
 ## Limitations
