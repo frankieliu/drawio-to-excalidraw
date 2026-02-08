@@ -166,7 +166,7 @@ class StencilToExcalidrawConverter {
 	/**
 	 * Create an Excalidraw freedraw element from shape data
 	 */
-	createExcalidrawElement(shapeName, points, index) {
+	createExcalidrawElement(shapeName, points, index, categoryName = 'drawio') {
 		const bounds = this.calculateBounds(points);
 
 		// Normalize points to start at 0,0
@@ -175,12 +175,15 @@ class StencilToExcalidrawConverter {
 			y - bounds.minY
 		]);
 
+		const timestamp = Date.now();
+		const random = Math.random().toString(36).substr(2, 9);
+
 		return {
 			type: 'freedraw',
 			version: 1,
 			versionNonce: Math.floor(Math.random() * 2147483647),
 			isDeleted: false,
-			id: `drawio_${index}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+			id: `${categoryName}_${index}_${timestamp}_${random}`,
 			fillStyle: 'solid',
 			strokeWidth: 1,
 			strokeStyle: 'solid',
@@ -198,13 +201,22 @@ class StencilToExcalidrawConverter {
 			frameId: null,
 			roundness: null,
 			boundElements: [],
-			updated: Date.now(),
+			updated: timestamp,
 			link: null,
 			locked: false,
 			points: normalizedPoints,
 			pressures: normalizedPoints.map(() => 0.5),
 			simulatePressure: true
 		};
+	}
+
+	/**
+	 * Generate a unique ID for library items
+	 */
+	generateUniqueId(categoryName, index) {
+		const timestamp = Date.now();
+		const random = Math.random().toString(36).substr(2, 9);
+		return `${categoryName}_${index}_${timestamp}_${random}`;
 	}
 
 	/**
@@ -257,12 +269,12 @@ class StencilToExcalidrawConverter {
 					continue;
 				}
 
-				// Create Excalidraw element
-				const element = this.createExcalidrawElement(shapeName, allPoints, libraryItems.length);
+				// Create Excalidraw element with unique ID
+				const element = this.createExcalidrawElement(shapeName, allPoints, libraryItems.length, categoryName);
 
-				// Create library item
+				// Create library item with globally unique ID
 				libraryItems.push({
-					id: `drawio_${libraryItems.length}`,
+					id: this.generateUniqueId(categoryName, libraryItems.length),
 					status: 'unpublished',
 					created: Date.now(),
 					name: shapeName,
