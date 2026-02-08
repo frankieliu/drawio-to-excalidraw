@@ -24,12 +24,36 @@ class XmlToSvgConverter {
 	}
 
 	/**
+	 * Extract color style mappings from shape attributes
+	 * These are used in mockup shapes like fillColor2=#ffffff;fillColor3=#ffca8c
+	 */
+	extractColorMappings(shapeNode) {
+		const colorMap = {};
+		const attrs = shapeNode.$;
+
+		if (!attrs) return colorMap;
+
+		// Extract actual color values from attributes
+		// Pattern: fillColor2="#ffffff" or as part of attribute string
+		for (const [key, value] of Object.entries(attrs)) {
+			if (key.match(/^(fillColor|strokeColor)\d+$/)) {
+				colorMap[key] = value;
+			}
+		}
+
+		return colorMap;
+	}
+
+	/**
 	 * Parse a shape element from XML and convert to SVG
 	 */
 	async convertShape(shapeNode) {
 		const name = shapeNode.$.name || 'shape';
 		const w = parseFloat(shapeNode.$.w || 100);
 		const h = parseFloat(shapeNode.$.h || 100);
+
+		// Extract color mappings for mockup shapes
+		const colorMap = this.extractColorMappings(shapeNode);
 
 		// Initialize SVG
 		const svgParts = [
@@ -40,10 +64,10 @@ class XmlToSvgConverter {
 		if (shapeNode.$$) {
 			for (const child of shapeNode.$$) {
 				if (child['#name'] === 'background' && child.$$) {
-					const bgSvg = this.processNodeList(child.$$, w, h, 1, 1);
+					const bgSvg = this.processNodeList(child.$$, w, h, 1, 1, colorMap);
 					if (bgSvg) svgParts.push(bgSvg);
 				} else if (child['#name'] === 'foreground' && child.$$) {
-					const fgSvg = this.processNodeList(child.$$, w, h, 1, 1);
+					const fgSvg = this.processNodeList(child.$$, w, h, 1, 1, colorMap);
 					if (fgSvg) svgParts.push(fgSvg);
 				}
 			}
@@ -63,15 +87,22 @@ class XmlToSvgConverter {
 	 * Process a list of drawing nodes (background or foreground)
 	 * Now works with children array in document order
 	 */
-	processNodeList(children, w, h, sx, sy) {
+	processNodeList(children, w, h, sx, sy, colorMap = {}) {
 		const svgParts = [];
 		let currentPath = [];
+		let currentShape = null; // Store current shape waiting for render command
 		let currentStyle = {
 			fill: '#e0e0e0',
 			stroke: '#000000',
 			strokeWidth: 1,
 			fillOpacity: 1,
 			strokeOpacity: 1
+		};
+		let textStyle = {
+			fontSize: 12,
+			fontColor: '#000000',
+			fontStyle: 'normal',
+			fontWeight: 'normal'
 		};
 		let inPath = false;
 
@@ -153,7 +184,8 @@ class XmlToSvgConverter {
 					const ry = parseFloat(attrs.y || 0) * sy;
 					const rw = parseFloat(attrs.w || 0) * sx;
 					const rh = parseFloat(attrs.h || 0) * sy;
-					svgParts.push(`<rect x="${rx}" y="${ry}" width="${rw}" height="${rh}" ${this.styleToAttr(currentStyle)}/>`);
+					// Store rect for later rendering
+					currentShape = `<rect x="${rx}" y="${ry}" width="${rw}" height="${rh}" STYLE_PLACEHOLDER/>`;
 					break;
 
 				case 'roundrect':
@@ -161,9 +193,15 @@ class XmlToSvgConverter {
 					const rry = parseFloat(attrs.y || 0) * sy;
 					const rrw = parseFloat(attrs.w || 0) * sx;
 					const rrh = parseFloat(attrs.h || 0) * sy;
-					const arcsize = parseFloat(attrs.arcsize || 0.1);
+					let arcsize = parseFloat(attrs.arcsize || 0.1);
+					// In draw.io, arcsize is a percentage (stored as 0-100+)
+					// Convert to decimal if > 1
+					if (arcsize > 1) {
+						arcsize = arcsize / 100;
+					}
 					const radius = Math.min(rrw, rrh) * arcsize;
-					svgParts.push(`<rect x="${rrx}" y="${rry}" width="${rrw}" height="${rrh}" rx="${radius}" ry="${radius}" ${this.styleToAttr(currentStyle)}/>`);
+					// Store roundrect for later rendering
+					currentShape = `<rect x="${rrx}" y="${rry}" width="${rrw}" height="${rrh}" rx="${radius}" ry="${radius}" STYLE_PLACEHOLDER/>`;
 					break;
 
 				case 'ellipse':
@@ -173,7 +211,8 @@ class XmlToSvgConverter {
 					const eh = parseFloat(attrs.h || 0) * sy;
 					const ecx = ex + ew / 2;
 					const ecy = ey + eh / 2;
-					svgParts.push(`<ellipse cx="${ecx}" cy="${ecy}" rx="${ew/2}" ry="${eh/2}" ${this.styleToAttr(currentStyle)}/>`);
+					// Store ellipse for later rendering
+					currentShape = `<ellipse cx="${ecx}" cy="${ecy}" rx="${ew/2}" ry="${eh/2}" STYLE_PLACEHOLDER/>`;
 					break;
 
 				case 'fillstroke':
@@ -181,6 +220,10 @@ class XmlToSvgConverter {
 						svgParts.push(this.buildPathElement(currentPath, currentStyle));
 						currentPath = [];
 						inPath = false;
+					} else if (currentShape) {
+						// Render shape with fill and stroke
+						svgParts.push(currentShape.replace('STYLE_PLACEHOLDER', this.styleToAttr(currentStyle)));
+						currentShape = null;
 					}
 					break;
 
@@ -190,6 +233,11 @@ class XmlToSvgConverter {
 						svgParts.push(this.buildPathElement(currentPath, fillStyle));
 						currentPath = [];
 						inPath = false;
+					} else if (currentShape) {
+						// Render shape with fill only
+						const fillStyle = { ...currentStyle, stroke: 'none' };
+						svgParts.push(currentShape.replace('STYLE_PLACEHOLDER', this.styleToAttr(fillStyle)));
+						currentShape = null;
 					}
 					break;
 
@@ -199,16 +247,37 @@ class XmlToSvgConverter {
 						svgParts.push(this.buildPathElement(currentPath, strokeStyle));
 						currentPath = [];
 						inPath = false;
+					} else if (currentShape) {
+						// Render shape with stroke only
+						const strokeStyle = { ...currentStyle, fill: 'none' };
+						svgParts.push(currentShape.replace('STYLE_PLACEHOLDER', this.styleToAttr(strokeStyle)));
+						currentShape = null;
 					}
 					break;
 
 				case 'strokecolor':
-					const color = attrs.color || '#000000';
+					let color = attrs.color || '#000000';
+					// Check for default attribute (used in mockup shapes)
+					const defaultStrokeColor = attrs.default;
+					// Resolve color variable if it exists in colorMap, or use default, or use color
+					if (colorMap[color]) {
+						color = colorMap[color];
+					} else if (defaultStrokeColor) {
+						color = defaultStrokeColor;
+					}
 					currentStyle.stroke = color;
 					break;
 
 				case 'fillcolor':
-					const fillColor = attrs.color || '#ffffff';
+					let fillColor = attrs.color || '#ffffff';
+					// Check for default attribute (used in mockup shapes)
+					const defaultFillColor = attrs.default;
+					// Resolve color variable if it exists in colorMap, or use default, or use color
+					if (colorMap[fillColor]) {
+						fillColor = colorMap[fillColor];
+					} else if (defaultFillColor) {
+						fillColor = defaultFillColor;
+					}
 					currentStyle.fill = fillColor;
 					break;
 
@@ -229,12 +298,60 @@ class XmlToSvgConverter {
 				case 'strokealpha':
 					currentStyle.strokeOpacity = parseFloat(attrs.alpha || 1);
 					break;
+
+				case 'fontsize':
+					textStyle.fontSize = parseFloat(attrs.size || 12);
+					break;
+
+				case 'fontcolor':
+					let fontColor = attrs.color || '#000000';
+					// Check for default attribute
+					const defaultFontColor = attrs.default;
+					// Resolve color variable if it exists in colorMap, or use default, or use color
+					if (colorMap[fontColor]) {
+						fontColor = colorMap[fontColor];
+					} else if (defaultFontColor) {
+						fontColor = defaultFontColor;
+					}
+					textStyle.fontColor = fontColor;
+					break;
+
+				case 'fontstyle':
+					// style="1" means bold, style="2" means italic, style="3" means bold+italic
+					const style = parseInt(attrs.style || 0);
+					if (style & 1) textStyle.fontWeight = 'bold';
+					if (style & 2) textStyle.fontStyle = 'italic';
+					break;
+
+				case 'text':
+					const textStr = attrs.str || '';
+					const tx = parseFloat(attrs.x || 0) * sx;
+					const ty = parseFloat(attrs.y || 0) * sy;
+					const align = attrs.align || 'left';
+					const valign = attrs.valign || 'top';
+
+					// Convert valign to SVG dominant-baseline
+					let dominantBaseline = 'hanging';
+					if (valign === 'middle') dominantBaseline = 'middle';
+					else if (valign === 'bottom') dominantBaseline = 'auto';
+
+					// Convert align to SVG text-anchor
+					let textAnchor = 'start';
+					if (align === 'center') textAnchor = 'middle';
+					else if (align === 'right') textAnchor = 'end';
+
+					svgParts.push(`<text x="${tx}" y="${ty}" fill="${textStyle.fontColor}" font-size="${textStyle.fontSize}" font-style="${textStyle.fontStyle}" font-weight="${textStyle.fontWeight}" text-anchor="${textAnchor}" dominant-baseline="${dominantBaseline}">${textStr}</text>`);
+					break;
 			}
 		}
 
-		// Close any remaining path
+		// Close any remaining path or shape
 		if (currentPath.length > 0) {
 			svgParts.push(this.buildPathElement(currentPath, currentStyle));
+		}
+		if (currentShape) {
+			// Render any pending shape with fillstroke by default
+			svgParts.push(currentShape.replace('STYLE_PLACEHOLDER', this.styleToAttr(currentStyle)));
 		}
 
 		return svgParts.join('\n');
