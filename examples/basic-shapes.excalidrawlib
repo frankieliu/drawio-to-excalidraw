@@ -1,0 +1,3407 @@
+{
+  "type": "excalidrawlib",
+  "version": 2,
+  "source": "drawio-converter",
+  "libraryItems": [
+    {
+      "id": "drawio_0",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "4 Point Star",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 358818580,
+          "isDeleted": false,
+          "id": "edx2ha0i1ww4omxfi5xce",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 0,
+          "y": 0,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 92,
+          "height": 92,
+          "seed": 730528738,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719102,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              46,
+              0
+            ],
+            [
+              56,
+              36
+            ],
+            [
+              92,
+              46
+            ],
+            [
+              56,
+              56
+            ],
+            [
+              46,
+              92
+            ],
+            [
+              36,
+              56
+            ],
+            [
+              0,
+              46
+            ],
+            [
+              36,
+              36
+            ],
+            [
+              46,
+              0
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_1",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "6 Point Star",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 349606039,
+          "isDeleted": false,
+          "id": "amrbtm3vhudz0d8aq0m2tp",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 0,
+          "y": 0,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 96,
+          "height": 84.5,
+          "seed": 88060098,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719102,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              23,
+              28.9
+            ],
+            [
+              23,
+              0
+            ],
+            [
+              48,
+              14.4
+            ],
+            [
+              73,
+              0
+            ],
+            [
+              73,
+              28.9
+            ],
+            [
+              96,
+              42.2
+            ],
+            [
+              73,
+              55.6
+            ],
+            [
+              73,
+              84.5
+            ],
+            [
+              48,
+              70
+            ],
+            [
+              23,
+              84.5
+            ],
+            [
+              23,
+              55.6
+            ],
+            [
+              0,
+              42.2
+            ],
+            [
+              23,
+              28.9
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_2",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "8 Point Star",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 761101147,
+          "isDeleted": false,
+          "id": "dptqkxtad2jb4osvsl0bjd",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 0,
+          "y": 0,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 96,
+          "height": 96,
+          "seed": 260899236,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719102,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              28,
+              28
+            ],
+            [
+              28,
+              0
+            ],
+            [
+              48,
+              20
+            ],
+            [
+              68,
+              0
+            ],
+            [
+              68,
+              28
+            ],
+            [
+              96,
+              28
+            ],
+            [
+              76,
+              48
+            ],
+            [
+              96,
+              68
+            ],
+            [
+              68,
+              68
+            ],
+            [
+              68,
+              96
+            ],
+            [
+              48,
+              76
+            ],
+            [
+              28,
+              96
+            ],
+            [
+              28,
+              68
+            ],
+            [
+              0,
+              68
+            ],
+            [
+              20,
+              48
+            ],
+            [
+              0,
+              28
+            ],
+            [
+              28,
+              28
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_3",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "Banner",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 501240319,
+          "isDeleted": false,
+          "id": "6ostkj1ylcvt43bp9r6lj",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 0,
+          "y": 0,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 96,
+          "height": 50,
+          "seed": 187201119,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719102,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              0,
+              50
+            ],
+            [
+              38,
+              50
+            ],
+            [
+              40.5,
+              40
+            ],
+            [
+              55.5,
+              40
+            ],
+            [
+              55.5,
+              47.5
+            ],
+            [
+              96,
+              50
+            ],
+            [
+              83,
+              30
+            ],
+            [
+              96,
+              10
+            ],
+            [
+              70.5,
+              10
+            ],
+            [
+              70.5,
+              2.5
+            ],
+            [
+              28,
+              0
+            ],
+            [
+              25.5,
+              10
+            ],
+            [
+              0,
+              10
+            ],
+            [
+              13,
+              30
+            ],
+            [
+              40.5,
+              47.5
+            ],
+            [
+              58,
+              50
+            ],
+            [
+              68,
+              0
+            ],
+            [
+              25.5,
+              2.5
+            ],
+            [
+              0,
+              50
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_4",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "Cloud Callout",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 305638275,
+          "isDeleted": false,
+          "id": "y7fujnjomvhhs5zp9zlbnm",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 12.1,
+          "y": 8.8,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 67,
+          "height": 29.999999999999996,
+          "seed": 59881509,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719102,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              0,
+              23
+            ],
+            [
+              0,
+              8
+            ],
+            [
+              21,
+              0
+            ],
+            [
+              47,
+              0
+            ],
+            [
+              67,
+              8
+            ],
+            [
+              67,
+              23
+            ],
+            [
+              46,
+              29.999999999999996
+            ],
+            [
+              22,
+              29.999999999999996
+            ],
+            [
+              0,
+              23
+            ],
+            [
+              0,
+              23
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_5",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "Cloud Rect",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 367381594,
+          "isDeleted": false,
+          "id": "qsz3x32iftjq07d5963jrf",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 0,
+          "y": 0,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 212.54,
+          "height": 175.05,
+          "seed": 870206456,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719103,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              8.46,
+              0
+            ],
+            [
+              0,
+              8.46
+            ],
+            [
+              3.16,
+              15.05
+            ],
+            [
+              0,
+              21.64
+            ],
+            [
+              3.16,
+              28.22
+            ],
+            [
+              0,
+              34.81
+            ],
+            [
+              3.16,
+              41.4
+            ],
+            [
+              0,
+              47.99
+            ],
+            [
+              3.16,
+              54.58
+            ],
+            [
+              0,
+              61.17
+            ],
+            [
+              3.16,
+              67.76
+            ],
+            [
+              0,
+              74.35
+            ],
+            [
+              3.16,
+              80.93
+            ],
+            [
+              0,
+              87.53
+            ],
+            [
+              3.16,
+              94.11
+            ],
+            [
+              0,
+              100.7
+            ],
+            [
+              3.16,
+              107.29
+            ],
+            [
+              0,
+              113.88
+            ],
+            [
+              3.16,
+              120.47
+            ],
+            [
+              0,
+              127.06
+            ],
+            [
+              3.16,
+              133.64
+            ],
+            [
+              0,
+              140.23
+            ],
+            [
+              3.16,
+              146.82
+            ],
+            [
+              0,
+              153.41
+            ],
+            [
+              3.16,
+              160
+            ],
+            [
+              0,
+              166.59
+            ],
+            [
+              8.46,
+              175.05
+            ],
+            [
+              15.5,
+              171.27
+            ],
+            [
+              22.55,
+              175.05
+            ],
+            [
+              29.53,
+              171.37
+            ],
+            [
+              36.5,
+              175.05
+            ],
+            [
+              43.48,
+              171.37
+            ],
+            [
+              50.45,
+              175.05
+            ],
+            [
+              57.43,
+              171.37
+            ],
+            [
+              64.4,
+              175.05
+            ],
+            [
+              71.38,
+              171.37
+            ],
+            [
+              78.35,
+              175.05
+            ],
+            [
+              85.33,
+              171.37
+            ],
+            [
+              92.3,
+              175.05
+            ],
+            [
+              99.28,
+              171.37
+            ],
+            [
+              106.25,
+              175.05
+            ],
+            [
+              113.23,
+              171.37
+            ],
+            [
+              120.2,
+              175.05
+            ],
+            [
+              127.18,
+              171.37
+            ],
+            [
+              134.15,
+              175.05
+            ],
+            [
+              141.13,
+              171.37
+            ],
+            [
+              148.1,
+              175.05
+            ],
+            [
+              155.08,
+              171.37
+            ],
+            [
+              162.06,
+              175.05
+            ],
+            [
+              169.03,
+              171.37
+            ],
+            [
+              176,
+              175.05
+            ],
+            [
+              182.98,
+              171.37
+            ],
+            [
+              189.96,
+              175.05
+            ],
+            [
+              197.02,
+              171.24
+            ],
+            [
+              204.08,
+              175.05
+            ],
+            [
+              212.54,
+              166.59
+            ],
+            [
+              209.38,
+              160
+            ],
+            [
+              212.54,
+              153.41
+            ],
+            [
+              209.38,
+              146.83
+            ],
+            [
+              212.54,
+              140.23
+            ],
+            [
+              209.38,
+              133.65
+            ],
+            [
+              212.54,
+              127.06
+            ],
+            [
+              209.38,
+              120.47
+            ],
+            [
+              212.54,
+              113.88
+            ],
+            [
+              209.38,
+              107.29
+            ],
+            [
+              212.54,
+              100.7
+            ],
+            [
+              209.38,
+              94.12
+            ],
+            [
+              212.54,
+              87.53
+            ],
+            [
+              209.38,
+              80.94
+            ],
+            [
+              212.54,
+              74.35
+            ],
+            [
+              209.38,
+              67.76
+            ],
+            [
+              212.54,
+              61.17
+            ],
+            [
+              209.38,
+              54.58
+            ],
+            [
+              212.54,
+              47.99
+            ],
+            [
+              209.38,
+              41.41
+            ],
+            [
+              212.54,
+              34.81
+            ],
+            [
+              209.38,
+              28.23
+            ],
+            [
+              212.54,
+              21.64
+            ],
+            [
+              209.38,
+              15.05
+            ],
+            [
+              212.54,
+              8.46
+            ],
+            [
+              204.08,
+              0
+            ],
+            [
+              197.02,
+              3.81
+            ],
+            [
+              189.96,
+              0
+            ],
+            [
+              182.98,
+              3.68
+            ],
+            [
+              176,
+              0
+            ],
+            [
+              169.02,
+              3.68
+            ],
+            [
+              162.06,
+              0
+            ],
+            [
+              155.07,
+              3.68
+            ],
+            [
+              148.1,
+              0
+            ],
+            [
+              141.12,
+              3.68
+            ],
+            [
+              134.15,
+              0
+            ],
+            [
+              127.17,
+              3.68
+            ],
+            [
+              120.2,
+              0
+            ],
+            [
+              113.22,
+              3.68
+            ],
+            [
+              106.25,
+              0
+            ],
+            [
+              99.27,
+              3.68
+            ],
+            [
+              92.3,
+              0
+            ],
+            [
+              85.32,
+              3.68
+            ],
+            [
+              78.35,
+              0
+            ],
+            [
+              71.37,
+              3.68
+            ],
+            [
+              64.4,
+              0
+            ],
+            [
+              57.42,
+              3.68
+            ],
+            [
+              50.45,
+              0
+            ],
+            [
+              43.47,
+              3.68
+            ],
+            [
+              36.5,
+              0
+            ],
+            [
+              29.52,
+              3.68
+            ],
+            [
+              22.55,
+              0
+            ],
+            [
+              15.5,
+              3.78
+            ],
+            [
+              8.46,
+              0
+            ],
+            [
+              8.46,
+              0
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_6",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "Cone",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 904768765,
+          "isDeleted": false,
+          "id": "91rzw5e0qpbabxcubdnn1",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 0,
+          "y": 0,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 99,
+          "height": 88,
+          "seed": 646967729,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719103,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              49.5,
+              0
+            ],
+            [
+              99,
+              88
+            ],
+            [
+              0,
+              88
+            ],
+            [
+              49.5,
+              0
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_7",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "Cross",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 914108518,
+          "isDeleted": false,
+          "id": "9ebnqxep1p4eev3ll01mqc",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 0,
+          "y": 0,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 98,
+          "height": 98,
+          "seed": 560154994,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719103,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              0,
+              34
+            ],
+            [
+              34,
+              34
+            ],
+            [
+              34,
+              0
+            ],
+            [
+              64,
+              0
+            ],
+            [
+              64,
+              34
+            ],
+            [
+              98,
+              34
+            ],
+            [
+              98,
+              64
+            ],
+            [
+              64,
+              64
+            ],
+            [
+              64,
+              98
+            ],
+            [
+              34,
+              98
+            ],
+            [
+              34,
+              64
+            ],
+            [
+              0,
+              64
+            ],
+            [
+              0,
+              34
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_8",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "Document",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 896785622,
+          "isDeleted": false,
+          "id": "d44orpib44sn70vlmo35i",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 0,
+          "y": 0,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 98,
+          "height": 98,
+          "seed": 598955318,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719103,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              98,
+              14
+            ],
+            [
+              98,
+              98
+            ],
+            [
+              0,
+              98
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              84,
+              0
+            ],
+            [
+              98,
+              14
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_9",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "Flash",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 509800523,
+          "isDeleted": false,
+          "id": "oln23v7l51g4qlctqu3ej",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 0,
+          "y": 0,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 60,
+          "height": 95.5,
+          "seed": 244991408,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719103,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              0,
+              95.5
+            ],
+            [
+              20,
+              75.5
+            ],
+            [
+              3,
+              61.5
+            ],
+            [
+              20,
+              49.5
+            ],
+            [
+              3,
+              31.5
+            ],
+            [
+              34,
+              0
+            ],
+            [
+              60,
+              25.5
+            ],
+            [
+              36,
+              39.5
+            ],
+            [
+              50,
+              53.5
+            ],
+            [
+              29,
+              65.5
+            ],
+            [
+              42,
+              76.5
+            ],
+            [
+              0,
+              95.5
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_10",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "Half Circle",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 304253459,
+          "isDeleted": false,
+          "id": "xbnhagf3o9loa37cgbcfd",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 0,
+          "y": 0,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 98,
+          "height": 0,
+          "seed": 583054767,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719103,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              98,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_11",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "Heart",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 612532326,
+          "isDeleted": false,
+          "id": "x70udn6b7znngzl8u3yod",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 11.47,
+          "y": 11.45,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 80.95,
+          "height": 83.28999999999999,
+          "seed": 558294867,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719103,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              40.47,
+              83.28999999999999
+            ],
+            [
+              80.09,
+              42.58
+            ],
+            [
+              80.95,
+              0.010000000000001563
+            ],
+            [
+              40.47,
+              0.11000000000000121
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0.8499999999999996,
+              42.58
+            ],
+            [
+              40.47,
+              83.28999999999999
+            ],
+            [
+              40.47,
+              83.28999999999999
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_12",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "Loud Callout",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 308877040,
+          "isDeleted": false,
+          "id": "hykso3t02whyl1uvqar9c",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 0,
+          "y": 0,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 93.3,
+          "height": 59.9,
+          "seed": 431938873,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719103,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              14.9,
+              43.9
+            ],
+            [
+              9.3,
+              46.7
+            ],
+            [
+              11.1,
+              40.9
+            ],
+            [
+              6.6,
+              43.9
+            ],
+            [
+              8.3,
+              39.2
+            ],
+            [
+              2.8,
+              40.8
+            ],
+            [
+              6.6,
+              36.4
+            ],
+            [
+              0.9,
+              36.2
+            ],
+            [
+              5.8,
+              32.7
+            ],
+            [
+              0,
+              30.8
+            ],
+            [
+              5.3,
+              28.2
+            ],
+            [
+              0.3,
+              25.6
+            ],
+            [
+              5.9,
+              24.19
+            ],
+            [
+              0.8,
+              19.9
+            ],
+            [
+              6.5,
+              19.8
+            ],
+            [
+              2.8,
+              15.1
+            ],
+            [
+              8.2,
+              16.1
+            ],
+            [
+              5.9,
+              11.3
+            ],
+            [
+              11.5,
+              13.2
+            ],
+            [
+              10.2,
+              8.7
+            ],
+            [
+              15.7,
+              10.6
+            ],
+            [
+              14.9,
+              6.15
+            ],
+            [
+              19.2,
+              9.3
+            ],
+            [
+              19.8,
+              4.3
+            ],
+            [
+              23.4,
+              8
+            ],
+            [
+              23.8,
+              3.4
+            ],
+            [
+              28.5,
+              6.9
+            ],
+            [
+              30.3,
+              1.3
+            ],
+            [
+              33.3,
+              6.2
+            ],
+            [
+              34.7,
+              0.6
+            ],
+            [
+              38.2,
+              6
+            ],
+            [
+              40.6,
+              0
+            ],
+            [
+              42.8,
+              5.8
+            ],
+            [
+              45.6,
+              0
+            ],
+            [
+              47.1,
+              6
+            ],
+            [
+              51.3,
+              1
+            ],
+            [
+              50.8,
+              6.3
+            ],
+            [
+              55.4,
+              0.6
+            ],
+            [
+              55.1,
+              6.6
+            ],
+            [
+              60.5,
+              1.4
+            ],
+            [
+              61.1,
+              7.1
+            ],
+            [
+              66.1,
+              2.7
+            ],
+            [
+              66.2,
+              8.7
+            ],
+            [
+              71.9,
+              4.4
+            ],
+            [
+              70.5,
+              10
+            ],
+            [
+              77.6,
+              6.2
+            ],
+            [
+              74.9,
+              11.8
+            ],
+            [
+              83.9,
+              7.8
+            ],
+            [
+              80.1,
+              13.6
+            ],
+            [
+              88.1,
+              11.9
+            ],
+            [
+              85.2,
+              17
+            ],
+            [
+              91.2,
+              16.9
+            ],
+            [
+              87,
+              20.1
+            ],
+            [
+              93.3,
+              21.2
+            ],
+            [
+              87.9,
+              24
+            ],
+            [
+              93.2,
+              25.8
+            ],
+            [
+              86.8,
+              26.8
+            ],
+            [
+              92.4,
+              30.3
+            ],
+            [
+              86.6,
+              30.8
+            ],
+            [
+              90.9,
+              34.8
+            ],
+            [
+              84.2,
+              33.5
+            ],
+            [
+              87.8,
+              38.8
+            ],
+            [
+              82,
+              36.6
+            ],
+            [
+              84.7,
+              41.7
+            ],
+            [
+              79.2,
+              40.7
+            ],
+            [
+              79.8,
+              46
+            ],
+            [
+              76.3,
+              42.9
+            ],
+            [
+              75.6,
+              48.6
+            ],
+            [
+              72,
+              44.7
+            ],
+            [
+              71.7,
+              51.2
+            ],
+            [
+              68,
+              46
+            ],
+            [
+              66.2,
+              52.1
+            ],
+            [
+              63.7,
+              46.6
+            ],
+            [
+              61.2,
+              53.7
+            ],
+            [
+              59.7,
+              47.6
+            ],
+            [
+              56.9,
+              53.8
+            ],
+            [
+              55,
+              48.1
+            ],
+            [
+              52.8,
+              53.9
+            ],
+            [
+              50.9,
+              48.1
+            ],
+            [
+              48.4,
+              54.5
+            ],
+            [
+              47,
+              48.1
+            ],
+            [
+              44.4,
+              53.7
+            ],
+            [
+              43.2,
+              47.4
+            ],
+            [
+              40.1,
+              54.2
+            ],
+            [
+              38.8,
+              47.4
+            ],
+            [
+              36.3,
+              54.7
+            ],
+            [
+              35.6,
+              47.8
+            ],
+            [
+              32.4,
+              55.1
+            ],
+            [
+              30.9,
+              46.6
+            ],
+            [
+              28.6,
+              53.3
+            ],
+            [
+              26.8,
+              47.8
+            ],
+            [
+              3.8,
+              59.9
+            ],
+            [
+              14.9,
+              43.9
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_13",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "Moon",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 145628779,
+          "isDeleted": false,
+          "id": "qwmvo8ckcaizfygkz5xtbj",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 37.05,
+          "y": 0,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 40,
+          "height": 92,
+          "seed": 918620903,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719103,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              40,
+              92
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_14",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "No Symbol",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 353869116,
+          "isDeleted": false,
+          "id": "9pr2floqiyfff9ro22m2a",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 0,
+          "y": 21.05,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 100,
+          "height": 57.95,
+          "seed": 194733393,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719103,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              0,
+              28.95
+            ],
+            [
+              78.95,
+              48.650000000000006
+            ],
+            [
+              21.15,
+              9.25
+            ],
+            [
+              100,
+              28.95
+            ],
+            [
+              0,
+              28.95
+            ],
+            [
+              30.3,
+              0
+            ],
+            [
+              69.7,
+              57.95
+            ],
+            [
+              0,
+              28.95
+            ],
+            [
+              0,
+              28.95
+            ],
+            [
+              0,
+              28.95
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_15",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "Octagon",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 895412888,
+          "isDeleted": false,
+          "id": "aji7nouqj1rzuvw9upeh",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 0,
+          "y": 0,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 98,
+          "height": 98,
+          "seed": 185139016,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719103,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              0,
+              29
+            ],
+            [
+              29,
+              0
+            ],
+            [
+              69,
+              0
+            ],
+            [
+              98,
+              29
+            ],
+            [
+              98,
+              69
+            ],
+            [
+              69,
+              98
+            ],
+            [
+              29,
+              98
+            ],
+            [
+              0,
+              69
+            ],
+            [
+              0,
+              29
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_16",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "Orthogonal Triangle",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 118759126,
+          "isDeleted": false,
+          "id": "8ulnnqqlcxq5tgkdqi9a33",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 0,
+          "y": 0,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 97,
+          "height": 97,
+          "seed": 572254720,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719103,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              0,
+              97
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              97,
+              97
+            ],
+            [
+              0,
+              97
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_17",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "Oval Callout",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 426903586,
+          "isDeleted": false,
+          "id": "heaxe0dw3mh95v28l3kt7d",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 9.03,
+          "y": 46.15,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 22.5,
+          "height": 17,
+          "seed": 349522279,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719103,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              11.500000000000002,
+              0
+            ],
+            [
+              22.5,
+              4
+            ],
+            [
+              0,
+              17
+            ],
+            [
+              11.500000000000002,
+              0
+            ],
+            [
+              11.500000000000002,
+              0
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_18",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "Parallelepiped",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 819709037,
+          "isDeleted": false,
+          "id": "wgbd8vkz8w1woimzv5fd6",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 0,
+          "y": 0,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 97,
+          "height": 60,
+          "seed": 37395940,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719103,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              0,
+              60
+            ],
+            [
+              23.5,
+              0
+            ],
+            [
+              97,
+              0
+            ],
+            [
+              73.5,
+              60
+            ],
+            [
+              0,
+              60
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_19",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "Pentagon",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 902986870,
+          "isDeleted": false,
+          "id": "kj790btcgrddlap8ijhf7f",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 0,
+          "y": 0,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 97,
+          "height": 90,
+          "seed": 970346336,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719103,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              18.5,
+              90
+            ],
+            [
+              0,
+              33
+            ],
+            [
+              48.5,
+              0
+            ],
+            [
+              97,
+              33
+            ],
+            [
+              78.5,
+              90
+            ],
+            [
+              18.5,
+              90
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_20",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "Pointed Oval",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 671285414,
+          "isDeleted": false,
+          "id": "nb3n4ot4n885w7ff2xoddc",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 25.46,
+          "y": 0,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 0,
+          "height": 100,
+          "seed": 186185436,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719103,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              100
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_21",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "Rectangular Callout",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 872867208,
+          "isDeleted": false,
+          "id": "0zyccjokc2op88mt6axn7qe",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 0,
+          "y": 0,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 98,
+          "height": 60,
+          "seed": 747828663,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719103,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              15,
+              43
+            ],
+            [
+              0,
+              43
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              98,
+              0
+            ],
+            [
+              98,
+              43
+            ],
+            [
+              29,
+              43
+            ],
+            [
+              4,
+              60
+            ],
+            [
+              15,
+              43
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_22",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "Rounded Rectangular Callout",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 971009908,
+          "isDeleted": false,
+          "id": "2374z5sikxl2dz595g7l2m",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 0,
+          "y": 0,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 98,
+          "height": 60,
+          "seed": 379270374,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719103,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              15.5,
+              43
+            ],
+            [
+              5,
+              43
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              93,
+              0
+            ],
+            [
+              98,
+              38
+            ],
+            [
+              29,
+              43
+            ],
+            [
+              0,
+              38
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              98,
+              5
+            ],
+            [
+              93,
+              43
+            ],
+            [
+              4,
+              60
+            ],
+            [
+              15.5,
+              43
+            ],
+            [
+              15.5,
+              43
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_23",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "Smiley",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 902007650,
+          "isDeleted": false,
+          "id": "vlznwwfvo4ap4nvb9b9ar",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 82,
+          "y": 51,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 10,
+          "height": 6,
+          "seed": 934265701,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719103,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              10,
+              6
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_24",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "Star",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 420107628,
+          "isDeleted": false,
+          "id": "ro54c893qzimp7h5a51hs",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 0,
+          "y": 0,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 95,
+          "height": 90,
+          "seed": 727820143,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719103,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              0,
+              33
+            ],
+            [
+              36.4,
+              33
+            ],
+            [
+              47.5,
+              0
+            ],
+            [
+              58.6,
+              33
+            ],
+            [
+              95,
+              33
+            ],
+            [
+              66,
+              55.1
+            ],
+            [
+              77.5,
+              90
+            ],
+            [
+              47.5,
+              68.4
+            ],
+            [
+              17.5,
+              90
+            ],
+            [
+              29,
+              55.1
+            ],
+            [
+              0,
+              33
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_25",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "Sun",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 688861330,
+          "isDeleted": false,
+          "id": "rdyhrctejv1qnmvwbmip2g",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 13.8,
+          "y": 67.5,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 13.7,
+          "height": 13.599999999999994,
+          "seed": 152967919,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719103,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              13.7,
+              7
+            ],
+            [
+              0,
+              13.599999999999994
+            ],
+            [
+              6.699999999999999,
+              0
+            ],
+            [
+              13.7,
+              7
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_26",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "Tick",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 180624487,
+          "isDeleted": false,
+          "id": "i59d713m7pmfvma4jyca",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 0.36,
+          "y": 1.69,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 83,
+          "height": 93,
+          "seed": 86972344,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719103,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              0,
+              65
+            ],
+            [
+              16,
+              57
+            ],
+            [
+              26,
+              68
+            ],
+            [
+              63,
+              4
+            ],
+            [
+              80,
+              0
+            ],
+            [
+              83,
+              7
+            ],
+            [
+              35,
+              93
+            ],
+            [
+              17,
+              93
+            ],
+            [
+              0,
+              67
+            ],
+            [
+              0,
+              65
+            ],
+            [
+              0,
+              65
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_27",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "Trapezoid",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 660684086,
+          "isDeleted": false,
+          "id": "wnsiygjppuijyjfvbq6kg",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 0,
+          "y": 0,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 97,
+          "height": 98,
+          "seed": 734940987,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719103,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              0,
+              98
+            ],
+            [
+              23.5,
+              0
+            ],
+            [
+              73.5,
+              0
+            ],
+            [
+              97,
+              98
+            ],
+            [
+              0,
+              98
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_28",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "Wave",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 77858463,
+          "isDeleted": false,
+          "id": "icnq50s6f4crsf4lxa8rrp",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 0,
+          "y": 8.7,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 98,
+          "height": 40,
+          "seed": 176402618,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719103,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              33,
+              0
+            ],
+            [
+              65,
+              0
+            ],
+            [
+              98,
+              0
+            ],
+            [
+              65,
+              40
+            ],
+            [
+              33,
+              40
+            ],
+            [
+              0,
+              40
+            ],
+            [
+              98,
+              40
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    },
+    {
+      "id": "drawio_29",
+      "status": "unpublished",
+      "created": 1770585719103,
+      "name": "X",
+      "elements": [
+        {
+          "type": "freedraw",
+          "version": 1,
+          "versionNonce": 162485927,
+          "isDeleted": false,
+          "id": "t1bojeg0bqxzww8vut0m",
+          "fillStyle": "solid",
+          "strokeWidth": 1,
+          "strokeStyle": "solid",
+          "roughness": 0,
+          "opacity": 100,
+          "angle": 0,
+          "x": 0,
+          "y": 0,
+          "strokeColor": "#000000",
+          "backgroundColor": "#e0e0e0",
+          "width": 96,
+          "height": 98,
+          "seed": 505661338,
+          "groupIds": [],
+          "frameId": null,
+          "roundness": null,
+          "boundElements": [],
+          "updated": 1770585719103,
+          "link": null,
+          "locked": false,
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              28,
+              0
+            ],
+            [
+              48,
+              29
+            ],
+            [
+              68,
+              0
+            ],
+            [
+              96,
+              0
+            ],
+            [
+              62,
+              49
+            ],
+            [
+              96,
+              98
+            ],
+            [
+              68,
+              98
+            ],
+            [
+              48,
+              69
+            ],
+            [
+              28,
+              98
+            ],
+            [
+              0,
+              98
+            ],
+            [
+              32,
+              49
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "pressures": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "simulatePressure": true
+        }
+      ]
+    }
+  ]
+}

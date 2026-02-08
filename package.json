@@ -1,0 +1,40 @@
+{
+	"name": "drawio-to-excalidraw",
+	"version": "1.0.0",
+	"description": "Convert draw.io XML stencils to SVG and Excalidraw library format",
+	"type": "module",
+	"main": "xml-to-excalidraw.js",
+	"bin": {
+		"drawio-to-svg": "./xml-to-svg.js",
+		"drawio-to-excalidraw": "./xml-to-excalidraw.js"
+	},
+	"scripts": {
+		"xml-to-svg": "node xml-to-svg.js",
+		"xml-to-excalidraw": "node xml-to-excalidraw.js"
+	},
+	"keywords": [
+		"drawio",
+		"excalidraw",
+		"converter",
+		"svg",
+		"stencils",
+		"diagrams",
+		"shapes"
+	],
+	"author": "Frankie Liu",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/frankieliu/drawio-to-excalidraw.git"
+	},
+	"bugs": {
+		"url": "https://github.com/frankieliu/drawio-to-excalidraw/issues"
+	},
+	"homepage": "https://github.com/frankieliu/drawio-to-excalidraw#readme",
+	"dependencies": {
+		"xml2js": "^0.6.2"
+	},
+	"engines": {
+		"node": ">=16.0.0"
+	}
+}
