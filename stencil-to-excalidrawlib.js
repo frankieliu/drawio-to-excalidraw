@@ -3,6 +3,8 @@
 /**
  * Convert draw.io XML stencils to Excalidraw library format (.excalidrawlib)
  *
+ * Uses the existing svg-to-excalidraw CLI tool for proper SVG conversion
+ *
  * Supported stencil categories:
  * - basic: Basic shapes (rectangles, circles, etc.)
  * - arrows: Arrow shapes
@@ -14,7 +16,13 @@
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
+import { execSync } from 'child_process';
 import { XmlToSvgConverter, parseXml } from './lib/xml-to-svg-converter.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const svgToExcalidrawCLI = path.resolve(__dirname, '../svg-to-excalidraw/bin/svg-to-excalidraw.js');
 
 class StencilToExcalidrawConverter {
 	constructor() {
@@ -28,134 +36,6 @@ class StencilToExcalidrawConverter {
 			// Not yet supported (JavaScript-based shapes, requires Phase 2):
 			// 'er': '../drawio-desktop/drawio/src/main/webapp/shapes/er/mxER.js',
 			// 'uml': '../drawio-desktop/drawio/src/main/webapp/shapes/mxUML25.js',
-		};
-	}
-
-	/**
-	 * Convert SVG path data to Excalidraw points format
-	 */
-	svgPathToPoints(svgPath) {
-		const points = [];
-		const commands = svgPath.match(/[MLHVCSQTAZ][^MLHVCSQTAZ]*/gi) || [];
-
-		let currentX = 0;
-		let currentY = 0;
-
-		for (const cmd of commands) {
-			const type = cmd[0].toUpperCase();
-			const values = cmd.slice(1).trim().split(/[\s,]+/).map(parseFloat).filter(v => !isNaN(v));
-
-			switch (type) {
-				case 'M': // moveto
-					currentX = values[0];
-					currentY = values[1];
-					points.push([currentX, currentY]);
-					break;
-
-				case 'L': // lineto
-					currentX = values[0];
-					currentY = values[1];
-					points.push([currentX, currentY]);
-					break;
-
-				case 'H': // horizontal lineto
-					currentX = values[0];
-					points.push([currentX, currentY]);
-					break;
-
-				case 'V': // vertical lineto
-					currentY = values[0];
-					points.push([currentX, currentY]);
-					break;
-
-				case 'Z': // closepath
-					if (points.length > 0) {
-						points.push([...points[0]]); // Close the path
-					}
-					break;
-
-				// Note: Curves (C, S, Q, T, A) are approximated as line segments
-				case 'C': // cubic bezier
-					// Take the end point
-					currentX = values[4];
-					currentY = values[5];
-					points.push([currentX, currentY]);
-					break;
-
-				case 'Q': // quadratic bezier
-					currentX = values[2];
-					currentY = values[3];
-					points.push([currentX, currentY]);
-					break;
-
-				case 'A': // arc
-					currentX = values[5];
-					currentY = values[6];
-					points.push([currentX, currentY]);
-					break;
-			}
-		}
-
-		return points;
-	}
-
-	/**
-	 * Extract path data from SVG string
-	 */
-	extractPathsFromSvg(svgString) {
-		const paths = [];
-		const pathRegex = /<path[^>]*d="([^"]*)"[^>]*\/>/g;
-		const rectRegex = /<rect[^>]*x="([^"]*)"[^>]*y="([^"]*)"[^>]*width="([^"]*)"[^>]*height="([^"]*)"[^>]*\/>/g;
-		const ellipseRegex = /<ellipse[^>]*cx="([^"]*)"[^>]*cy="([^"]*)"[^>]*rx="([^"]*)"[^>]*ry="([^"]*)"[^>]*\/>/g;
-
-		// Extract path elements
-		let match;
-		while ((match = pathRegex.exec(svgString)) !== null) {
-			paths.push(match[1]);
-		}
-
-		// Convert rect to path
-		while ((match = rectRegex.exec(svgString)) !== null) {
-			const x = parseFloat(match[1]);
-			const y = parseFloat(match[2]);
-			const w = parseFloat(match[3]);
-			const h = parseFloat(match[4]);
-			paths.push(`M ${x} ${y} L ${x + w} ${y} L ${x + w} ${y + h} L ${x} ${y + h} Z`);
-		}
-
-		// Convert ellipse to path (approximate with 4 bezier curves)
-		while ((match = ellipseRegex.exec(svgString)) !== null) {
-			const cx = parseFloat(match[1]);
-			const cy = parseFloat(match[2]);
-			const rx = parseFloat(match[3]);
-			const ry = parseFloat(match[4]);
-			// Simplified: just use 8 points around the ellipse
-			paths.push(`M ${cx} ${cy - ry} L ${cx + rx} ${cy} L ${cx} ${cy + ry} L ${cx - rx} ${cy} Z`);
-		}
-
-		return paths;
-	}
-
-	/**
-	 * Calculate bounding box of points
-	 */
-	calculateBounds(points) {
-		if (points.length === 0) return { minX: 0, minY: 0, maxX: 0, maxY: 0, width: 0, height: 0 };
-
-		const xs = points.map(p => p[0]);
-		const ys = points.map(p => p[1]);
-		const minX = Math.min(...xs);
-		const minY = Math.min(...ys);
-		const maxX = Math.max(...xs);
-		const maxY = Math.max(...ys);
-
-		return {
-			minX,
-			minY,
-			maxX,
-			maxY,
-			width: maxX - minX,
-			height: maxY - minY
 		};
 	}
 
@@ -182,51 +62,21 @@ class StencilToExcalidrawConverter {
 	}
 
 	/**
-	 * Create an Excalidraw freedraw element from shape data
+	 * Convert SVG to Excalidraw format using the svg-to-excalidraw CLI
 	 */
-	createExcalidrawElement(shapeName, points, categoryName = 'drawio') {
-		const bounds = this.calculateBounds(points);
+	convertSvgToExcalidraw(svgContent) {
+		try {
+			// Use the svg-to-excalidraw CLI tool
+			const result = execSync(`node "${svgToExcalidrawCLI}" -`, {
+				input: svgContent,
+				encoding: 'utf-8',
+				maxBuffer: 10 * 1024 * 1024 // 10MB buffer
+			});
 
-		// Normalize points to start at 0,0
-		const normalizedPoints = points.map(([x, y]) => [
-			x - bounds.minX,
-			y - bounds.minY
-		]);
-
-		// Generate deterministic ID based on category and shape name
-		const elementId = this.generateUniqueId(categoryName, shapeName);
-		const timestamp = Date.now();
-
-		return {
-			type: 'freedraw',
-			version: 1,
-			versionNonce: Math.floor(Math.random() * 2147483647),
-			isDeleted: false,
-			id: elementId,
-			fillStyle: 'solid',
-			strokeWidth: 1,
-			strokeStyle: 'solid',
-			roughness: 0,
-			opacity: 100,
-			angle: 0,
-			x: 0,
-			y: 0,
-			strokeColor: '#000000',
-			backgroundColor: '#e0e0e0',
-			width: bounds.width,
-			height: bounds.height,
-			seed: Math.floor(Math.random() * 2147483647),
-			groupIds: [],
-			frameId: null,
-			roundness: null,
-			boundElements: [],
-			updated: timestamp,
-			link: null,
-			locked: false,
-			points: normalizedPoints,
-			pressures: normalizedPoints.map(() => 0.5),
-			simulatePressure: true
-		};
+			return JSON.parse(result);
+		} catch (error) {
+			throw new Error(`svg-to-excalidraw conversion failed: ${error.message}`);
+		}
 	}
 
 	/**
@@ -259,28 +109,14 @@ class StencilToExcalidrawConverter {
 				const result = await this.xmlConverter.convertShape(shape);
 				const svgContent = result.svg;
 
-				// Extract paths from SVG
-				const paths = this.extractPathsFromSvg(svgContent);
+				// Use svg-to-excalidraw CLI to convert SVG to Excalidraw elements
+				const excalidrawData = this.convertSvgToExcalidraw(svgContent);
+				const elements = excalidrawData.elements || [];
 
-				if (paths.length === 0) {
-					console.log(`  ⚠ Skipping "${shapeName}" - no paths found`);
+				if (elements.length === 0) {
+					console.log(`  ⚠ Skipping "${shapeName}" - no elements generated`);
 					continue;
 				}
-
-				// Combine all paths into one set of points
-				const allPoints = [];
-				for (const pathData of paths) {
-					const pathPoints = this.svgPathToPoints(pathData);
-					allPoints.push(...pathPoints);
-				}
-
-				if (allPoints.length < 2) {
-					console.log(`  ⚠ Skipping "${shapeName}" - insufficient points`);
-					continue;
-				}
-
-				// Create Excalidraw element with deterministic ID
-				const element = this.createExcalidrawElement(shapeName, allPoints, categoryName);
 
 				// Create library item with deterministic ID
 				libraryItems.push({
@@ -288,7 +124,7 @@ class StencilToExcalidrawConverter {
 					status: 'unpublished',
 					created: Date.now(),
 					name: shapeName,
-					elements: [element]
+					elements: elements
 				});
 
 				if ((i + 1) % 10 === 0) {
