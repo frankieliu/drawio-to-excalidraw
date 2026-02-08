@@ -13,12 +13,8 @@
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
-import { parseString } from 'xml2js';
-import { promisify } from 'util';
 import path from 'path';
-import { XmlToSvgConverter } from './xml-to-svg.js';
-
-const parseXml = promisify(parseString);
+import { XmlToSvgConverter, parseXml } from './lib/xml-to-svg-converter.js';
 
 class StencilToExcalidrawConverter {
 	constructor() {
@@ -164,9 +160,31 @@ class StencilToExcalidrawConverter {
 	}
 
 	/**
+	 * Sanitize a name for use in IDs
+	 * Converts to lowercase and replaces non-alphanumeric chars with underscores
+	 */
+	sanitizeName(name) {
+		return name
+			.toLowerCase()
+			.replace(/[^a-z0-9]+/g, '_')
+			.replace(/^_+|_+$/g, ''); // Remove leading/trailing underscores
+	}
+
+	/**
+	 * Generate a deterministic unique ID based on category and shape name
+	 * Format: {category}_{sanitized_shape_name}
+	 * Examples: basic_4_point_star, arrows_bent_left_arrow, flowchart_process
+	 */
+	generateUniqueId(categoryName, shapeName) {
+		const sanitizedCategory = this.sanitizeName(categoryName);
+		const sanitizedShape = this.sanitizeName(shapeName);
+		return `${sanitizedCategory}_${sanitizedShape}`;
+	}
+
+	/**
 	 * Create an Excalidraw freedraw element from shape data
 	 */
-	createExcalidrawElement(shapeName, points, index, categoryName = 'drawio') {
+	createExcalidrawElement(shapeName, points, categoryName = 'drawio') {
 		const bounds = this.calculateBounds(points);
 
 		// Normalize points to start at 0,0
@@ -175,15 +193,16 @@ class StencilToExcalidrawConverter {
 			y - bounds.minY
 		]);
 
+		// Generate deterministic ID based on category and shape name
+		const elementId = this.generateUniqueId(categoryName, shapeName);
 		const timestamp = Date.now();
-		const random = Math.random().toString(36).substr(2, 9);
 
 		return {
 			type: 'freedraw',
 			version: 1,
 			versionNonce: Math.floor(Math.random() * 2147483647),
 			isDeleted: false,
-			id: `${categoryName}_${index}_${timestamp}_${random}`,
+			id: elementId,
 			fillStyle: 'solid',
 			strokeWidth: 1,
 			strokeStyle: 'solid',
@@ -208,15 +227,6 @@ class StencilToExcalidrawConverter {
 			pressures: normalizedPoints.map(() => 0.5),
 			simulatePressure: true
 		};
-	}
-
-	/**
-	 * Generate a unique ID for library items
-	 */
-	generateUniqueId(categoryName, index) {
-		const timestamp = Date.now();
-		const random = Math.random().toString(36).substr(2, 9);
-		return `${categoryName}_${index}_${timestamp}_${random}`;
 	}
 
 	/**
@@ -269,12 +279,12 @@ class StencilToExcalidrawConverter {
 					continue;
 				}
 
-				// Create Excalidraw element with unique ID
-				const element = this.createExcalidrawElement(shapeName, allPoints, libraryItems.length, categoryName);
+				// Create Excalidraw element with deterministic ID
+				const element = this.createExcalidrawElement(shapeName, allPoints, categoryName);
 
-				// Create library item with globally unique ID
+				// Create library item with deterministic ID
 				libraryItems.push({
-					id: this.generateUniqueId(categoryName, libraryItems.length),
+					id: this.generateUniqueId(categoryName, shapeName),
 					status: 'unpublished',
 					created: Date.now(),
 					name: shapeName,
