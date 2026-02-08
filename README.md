@@ -64,6 +64,19 @@ drawio-to-excalidraw ./xml-stencils/ output.excalidrawlib
 node xml-to-excalidraw.js ./xml-stencils/ output.excalidrawlib
 ```
 
+### Convert Specific Stencil Categories
+
+```bash
+# Convert basic, arrows, and flowchart categories
+node stencil-to-excalidrawlib.js basic arrows flowchart
+
+# Convert all supported categories
+node stencil-to-excalidrawlib.js all
+
+# Specify custom output directory
+node stencil-to-excalidrawlib.js basic --output=./my-libraries
+```
+
 ## Usage Examples
 
 ### Example 1: Convert Basic Shapes
@@ -163,7 +176,51 @@ When converting the full draw.io stencils library, you get access to:
 
 Total: **8,746+ shapes** available across **200+ XML files**!
 
+## Stencil Categories
+
+The `stencil-to-excalidrawlib.js` script converts specific draw.io stencil categories into separate Excalidraw libraries:
+
+**Supported Categories (XML-based):**
+- `basic` - Basic geometric shapes (rectangles, circles, stars, etc.)
+- `arrows` - Various arrow styles and directions
+- `flowchart` - Flowchart symbols (process, decision, data, etc.)
+
+**Not Yet Supported (JavaScript-based, requires Phase 2):**
+- `er` - Entity Relationship diagram shapes
+- `uml` - UML diagram shapes
+- `general`, `misc`, `advanced` - These are JavaScript-based shape categories
+
+See `TODO.md` for the roadmap to support JavaScript-based shapes.
+
 ## Command Line Options
+
+### stencil-to-excalidrawlib.js
+
+```bash
+node stencil-to-excalidrawlib.js [categories...] [--output=DIR]
+```
+
+**Categories:**
+- `basic` - Basic shapes
+- `arrows` - Arrow shapes
+- `flowchart` - Flowchart symbols
+- `all` - Convert all supported categories
+
+**Options:**
+- `--output=DIR` - Output directory (default: `./excalidraw-libraries`)
+- `--help, -h` - Show help message
+
+**Examples:**
+```bash
+# Convert multiple categories
+node stencil-to-excalidrawlib.js basic arrows flowchart
+
+# Convert all supported categories
+node stencil-to-excalidrawlib.js all
+
+# Custom output directory
+node stencil-to-excalidrawlib.js basic --output=./libraries
+```
 
 ### xml-to-svg.js
 
