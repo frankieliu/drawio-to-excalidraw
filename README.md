@@ -1,15 +1,25 @@
 # Draw.io to Excalidraw Converter
 
-Convert draw.io XML stencil shapes into SVG and Excalidraw library formats.
+Convert draw.io shapes (XML stencils and JavaScript MX shapes) into SVG and Excalidraw library formats.
 
 ## Features
 
+### XML Stencils (Completed)
 - ✅ Convert draw.io XML stencils to SVG format
 - ✅ Convert draw.io XML stencils to Excalidraw libraries
 - ✅ Preserve colors, stroke width, and fills
 - ✅ Support for paths, curves, arcs, and basic shapes
 - ✅ Process entire directories recursively
-- ✅ 8,746+ shapes from draw.io stencils library
+- ✅ **2,051+ shapes** converted from draw.io stencils library
+
+### MX Shapes (In Progress)
+- ✅ Convert JavaScript-based mxGraph shapes to SVG using Playwright automation
+- ✅ **31 Basic shapes** (mxgraph.basic.*) - rectangles, polygons, ellipses, etc.
+- ✅ **16 Misc palette shapes** - curly brackets, isometric cubes, crossbars, etc.
+- 🚧 Mockup shapes (~50 shapes) - coming next
+- 📋 iOS, Android, Infographic shapes - planned
+
+See [MX Shapes Quick Start](./docs/MX_SHAPES_QUICKSTART.md) for the new JavaScript shape converter.
 
 ## Installation
 
@@ -249,10 +259,16 @@ See the stencil categories section above for full usage details.
 
 ## Documentation
 
+### XML Stencils (Completed)
 - [Usage Guide](./docs/USAGE.md) - Detailed examples and use cases
 - [API Documentation](./docs/API.md) - API reference and code examples
 - [Architecture](./docs/ARCHITECTURE.md) - Technical architecture overview
 - [Contributing](./docs/CONTRIBUTING.md) - Contribution guidelines
+
+### MX Shapes (New - JavaScript-based shapes)
+- [Quick Start Guide](./docs/MX_SHAPES_QUICKSTART.md) - **Start here** to resume MX shape work
+- [Technical Documentation](./docs/MX_SHAPES_CONVERSION.md) - Complete architecture and implementation details
+- [TODO](./TODO.md) - Current status and next steps
 
 ## Examples
 
