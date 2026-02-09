@@ -7,95 +7,186 @@
 - ✅ Documented both shape systems in `SHAPE_SYSTEMS.md`
 - ✅ Successfully converted 8,746+ XML stencil shapes to SVG
 
-## Phase 2: mxGraph JavaScript Shape to SVG Conversion (Next Steps)
+## Phase 2: mxGraph JavaScript Shape to SVG Conversion ✅ (In Progress)
 
-### Step 1: Understand draw.io's mxGraph to SVG Conversion
+### Approach Selected: Headless Browser Automation (Playwright)
 
-**Goal:** Reverse-engineer how draw.io renders JavaScript shapes to SVG
+**Rationale:** Uses actual draw.io rendering engine for 100% accuracy, requires no draw.io source modifications (easiest to maintain).
 
-**Tasks:**
-1. Find the draw.io code that converts mxGraph JavaScript shapes to SVG
-   - Look in `../drawio-desktop/drawio/src/main/webapp/js/`
-   - Search for mxGraph canvas rendering code
-   - Identify how `mxShape.prototype.paintVertexShape()` generates SVG
-   - Understand how style parameters (strokeColor2, fillColor2, etc.) are applied
+See detailed documentation: `docs/MX_SHAPES_CONVERSION.md`
 
-2. Analyze the mxGraph canvas abstraction layer
-   - Find `mxAbstractCanvas2D` and its SVG implementation
-   - Understand how drawing commands (ellipse, rect, text, etc.) map to SVG
-   - Document the canvas API used by shape `foreground()` and `background()` methods
+### ✅ Step 1: Proof of Concept (Completed)
+- ✅ Installed Playwright dependency
+- ✅ Created `mx-shape-to-excalidrawlib.js` script
+- ✅ Tested single shape conversion (mxgraph.basic.rect)
+- ✅ Verified SVG export matches draw.io manual export
+- ✅ Implemented browser automation with draw.io API access
 
-3. Document key JavaScript shape patterns
-   - How shapes read style parameters: `mxUtils.getValue(this.style, 'strokeColor2', '#008cff')`
-   - How shapes use bounds: `this.bounds.width`, `this.bounds.height`
-   - How dynamic positioning works (e.g., magnifying glass at `w - 15`)
-   - Common drawing patterns across multiple shapes
+### ✅ Step 2: Basic Shapes Category (Completed)
+- ✅ Created `parse-sidebar-dimensions.js` to extract shape metadata
+- ✅ Implemented shape enumeration from `mxCellRenderer.defaultShapes`
+- ✅ Added `styleSuffix` support for parametric shapes (polygon with polyCoords)
+- ✅ Implemented sidebar filtering (only export UI-visible shapes)
+- ✅ Fixed polygon empty rendering issue
+- ✅ Filtered out non-sidebar shapes (bendingArch, numberedEntryVert, cross2)
+- ✅ Exported 31 Basic shapes to `mx-shape-svgs/`
 
-### Step 2: Build mxGraph Shape to SVG Converter
+**Key files created:**
+- `shape-dimensions.json` - Metadata for 31 Basic shapes
+- `mx-shape-svgs/basic-*.svg` - 31 exported SVG files
 
-**Goal:** Create a tool that can execute JavaScript shapes and output SVG
+### ✅ Step 3: Misc Palette Category (Completed)
+- ✅ Created `parse-misc-dimensions.js` to extract Misc palette metadata
+- ✅ Implemented shape variation handling (suffixes: _2, _3, etc.)
+- ✅ Fixed curly bracket rendering issue (customParams conflict)
+- ✅ Exported 16 Misc shapes to `misc-svgs/`
 
-**Approach Options:**
+**Shapes exported:**
+- Left/Right Curly Brackets (curlyBracket, curlyBracket_2)
+- Isometric Cubes (isoCube, isoCube2)
+- Double Ellipses (doubleEllipse, semiEllipse variants)
+- Crossbars (crossbar, crossbar_2)
+- Partial Rectangles (partialRectangle variants)
+- Waypoint (waypoint variants)
 
-**Option A: JavaScript Runtime Approach**
-- Use Node.js to execute shape JavaScript
-- Mock the mxGraph library dependencies (mxShape, mxUtils, mxConstants)
-- Capture canvas drawing commands and translate to SVG
-- Pros: Can handle any shape complexity
-- Cons: Requires full mxGraph library simulation
+**Key files created:**
+- `misc-dimensions.json` - Metadata for 16 Misc shapes
+- `misc-svgs/misc-*.svg` - 16 exported SVG files
 
-**Option B: Static Analysis Approach**
-- Parse JavaScript shape code as AST
-- Extract drawing commands from `foreground()` and `background()` methods
-- Translate canvas commands directly to SVG
-- Pros: Simpler, no runtime needed
-- Cons: May fail on complex dynamic logic
-
-**Option C: Hybrid Approach (Recommended)**
-- Use headless browser (Puppeteer) with actual mxGraph library
-- Load shape JavaScript in real draw.io environment
-- Export rendered SVG from canvas
-- Pros: Most accurate, uses actual draw.io code
-- Cons: Heavier dependency
+### 🚧 Step 4: Mockup Shapes Category (Next)
+**Goal:** Export all UI mockup shapes (~50 shapes from 8 files)
 
 **Tasks:**
-1. Choose approach based on complexity analysis
-2. Create proof-of-concept with one shape (e.g., Search Box)
-3. Implement style parameter injection (colors, text, sizes)
-4. Test with multiple shape categories (mockup, iOS, basic)
-5. Build batch converter for all JavaScript shapes
-6. Document limitations and edge cases
+1. [ ] Enumerate shapes from `mxgraph.mockup.*` namespace
+2. [ ] Handle mockup-specific parameters (mainText, buttonText, etc.)
+3. [ ] Test with various mockup categories:
+   - Forms (searchBox, comboBox, etc.)
+   - Buttons
+   - Navigation
+   - Containers
+   - Text
+   - Graphics
+   - Markup
+   - Misc
+4. [ ] Export to `mockup-svgs/`
 
-### Step 3: Integration and Testing
+**Estimated:** 50-60 shapes
+
+### Step 5: SVG to Excalidraw Integration (Planned)
+**Goal:** Automate conversion from SVG to .excalidrawlib format
 
 **Tasks:**
-1. Integrate mxGraph converter with existing XML stencil converter
-2. Create unified interface for both shape systems
-3. Test with all shape categories
-4. Compare outputs with draw.io exports
-5. Document usage and examples
+1. [ ] Update converter to call `svg-to-excalidraw` CLI automatically
+2. [ ] Generate library metadata (name, version, source)
+3. [ ] Create unified output files:
+   - `basic-js.excalidrawlib`
+   - `misc.excalidrawlib`
+   - `mockup.excalidrawlib`
+4. [ ] Add deterministic ID generation (consistent with XML pipeline)
+5. [ ] Test loading in Excalidraw application
+6. [ ] Document integration process
 
-## Research Files
+### Step 6: Additional Shape Categories (Future)
+**Potential targets:**
+- [ ] `mxgraph.ios7.*` - iOS 7 UI components
+- [ ] `mxgraph.android.*` - Android UI components
+- [ ] `mxgraph.infographic.*` - Infographic shapes
+- [ ] Other JavaScript-based shape libraries
 
-**Key draw.io files to examine:**
-- `drawio/src/main/webapp/js/mxClient.js` - Main mxGraph entry point
-- `drawio/src/main/webapp/js/shape/mxShape.js` - Base shape class
-- `drawio/src/main/webapp/js/util/mxUtils.js` - Utility functions
-- `drawio/src/main/webapp/js/view/mxGraph.js` - Graph rendering
-- `drawio/src/main/webapp/js/view/mxGraphView.js` - View/canvas management
-- `drawio/src/main/webapp/shapes/mockup/mxMockupForms.js` - Example shape
+## Technical Documentation
+
+**Architecture and process:** `docs/MX_SHAPES_CONVERSION.md`
+
+**Key scripts:**
+- `mx-shape-to-excalidrawlib.js` - Main converter (Playwright automation)
+- `parse-sidebar-dimensions.js` - Extract Basic shapes metadata
+- `parse-misc-dimensions.js` - Extract Misc palette metadata
+
+**Key learnings:**
+1. **Shape filtering:** Only export shapes with sidebar definitions (UI-visible)
+2. **Style composition:** Basic shapes use `shape=name` + `styleSuffix`, Misc shapes use complete `style` strings
+3. **customParams handling:** Avoid conflicts by not appending when complete style exists
+4. **Shape variations:** Handle multiple variants with suffixes (_2, _3, etc.)
 
 ## Success Criteria
 
-- [ ] Can convert mxgraph.mockup.forms.searchBox to SVG with custom colors
-- [ ] Can convert mxgraph.ios7.icons.alarm_clock to SVG matching document export
+- ✅ Can convert mxgraph.basic.* shapes to SVG with default styles
+- ✅ Generated SVGs match draw.io GUI exports (verified)
+- ✅ Can handle parametric shapes (polygon with polyCoords)
+- ✅ Can handle Misc palette shapes (curly brackets, isometric cubes, etc.)
+- [ ] Can convert mxgraph.mockup.* shapes to SVG
+- [ ] Can automatically generate .excalidrawlib files
 - [ ] Can handle style parameters (strokeColor2, mainText, etc.)
-- [ ] Can process all shapes in `shapes/mockup/` directory
-- [ ] Can process all shapes in `shapes/ios7/` directory
-- [ ] Generated SVGs match draw.io GUI exports
 
 ## Resources
 
 - **mxGraph Documentation**: https://jgraph.github.io/mxgraph/
 - **draw.io GitHub**: https://github.com/jgraph/drawio
 - **Shape Examples**: `../drawio-desktop/drawio/src/main/webapp/shapes/`
+
+---
+
+# TODO: Remaining XML Stencil Conversions
+
+## Completed XML Stencils (14)
+
+- ✅ arrows
+- ✅ basic
+- ✅ flowchart
+- ✅ bpmn (39 shapes)
+- ✅ networks (57 shapes)
+- ✅ networks2 (115 shapes)
+- ✅ kubernetes (40 shapes)
+- ✅ kubernetes2 (39 shapes)
+- ✅ aws3 (293 shapes)
+- ✅ aws3d (16 shapes)
+- ✅ aws4 (1,031 shapes)
+- ✅ azure (89 shapes)
+- ✅ gcp2 (297 shapes)
+- ✅ eip (36 shapes)
+
+**Total: 2,051+ shapes converted**
+
+## Remaining XML Stencils (19)
+
+### Cloud Platforms
+- [ ] alibaba_cloud
+- [ ] ibm
+- [ ] ibm_cloud
+- [ ] openstack
+
+### Enterprise/SaaS
+- [ ] atlassian
+- [ ] citrix
+- [ ] citrix2
+- [ ] salesforce
+
+### UI/Web
+- [ ] bootstrap
+- [ ] gmdl (Google Material Design)
+- [ ] webicons
+- [ ] weblogos
+
+### Engineering/Infrastructure
+- [ ] cabinets
+- [ ] cisco19
+- [ ] fluid_power
+- [ ] vvd (VMware Validated Design)
+
+### Other
+- [ ] floorplan
+- [ ] lean_mapping
+- [ ] sitemap
+
+## How to Convert
+
+```bash
+# Convert a single category
+node stencil-to-excalidrawlib.js <category-name>
+
+# Convert multiple categories at once
+node stencil-to-excalidrawlib.js alibaba_cloud atlassian bootstrap
+
+# Convert all remaining stencils
+node stencil-to-excalidrawlib.js alibaba_cloud atlassian bootstrap cabinets cisco19 citrix citrix2 floorplan fluid_power gmdl ibm ibm_cloud lean_mapping openstack salesforce sitemap vvd webicons weblogos
+```

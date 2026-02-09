@@ -1,0 +1,450 @@
+{
+  "mxgraph.basic.4_point_star_2": {
+    "width": 100,
+    "height": 100,
+    "widthExpr": "w",
+    "heightExpr": "h",
+    "title": "4 Point Star",
+    "styleSuffix": "4_point_star_2;dx=0.8;"
+  },
+  "mxgraph.basic.6_point_star": {
+    "width": 100,
+    "height": 90,
+    "widthExpr": "w",
+    "heightExpr": "h * 0.9",
+    "title": "6 Point Star",
+    "styleSuffix": "6_point_star"
+  },
+  "mxgraph.basic.8_point_star": {
+    "width": 100,
+    "height": 100,
+    "widthExpr": "w",
+    "heightExpr": "h",
+    "title": "8 Point Star",
+    "styleSuffix": "8_point_star"
+  },
+  "mxgraph.basic.acute_triangle": {
+    "width": 100,
+    "height": 70,
+    "widthExpr": "w",
+    "heightExpr": "h * 0.7",
+    "title": "Acute Triangle",
+    "styleSuffix": "acute_triangle;dx=0.5;"
+  },
+  "mxgraph.basic.arc": {
+    "width": 100,
+    "height": 100,
+    "widthExpr": "w",
+    "heightExpr": "h",
+    "title": "Arc",
+    "styleSuffix": "arc;startAngle=0.3;endAngle=0.1;"
+  },
+  "mxgraph.basic.banner": {
+    "width": 100,
+    "height": 50,
+    "widthExpr": "w",
+    "heightExpr": "h * 0.5",
+    "title": "Banner",
+    "styleSuffix": "banner"
+  },
+  "mxgraph.basic.button": {
+    "width": 100,
+    "height": 60,
+    "widthExpr": "w",
+    "heightExpr": "h * 0.6",
+    "title": "Button",
+    "styleSuffix": "button"
+  },
+  "mxgraph.basic.cloud_callout": {
+    "width": 90,
+    "height": 60,
+    "widthExpr": "w * 0.9",
+    "heightExpr": "h * 0.6",
+    "title": "Cloud Callout",
+    "styleSuffix": "cloud_callout"
+  },
+  "mxgraph.basic.cloud_rect": {
+    "width": 120,
+    "height": 90,
+    "widthExpr": "w * 1.2",
+    "heightExpr": "h * 0.9",
+    "title": "Cloud Rectangle",
+    "styleSuffix": "cloud_rect"
+  },
+  "mxgraph.basic.cone": {
+    "width": 100,
+    "height": 100,
+    "widthExpr": "w",
+    "heightExpr": "h",
+    "title": "Cone",
+    "styleSuffix": "cone"
+  },
+  "mxgraph.basic.cone2": {
+    "width": 100,
+    "height": 100,
+    "widthExpr": "w",
+    "heightExpr": "h",
+    "title": "Cone (adjustable)",
+    "styleSuffix": "cone2;dx=0.5;dy=0.9;"
+  },
+  "mxgraph.basic.corner_round_rect": {
+    "width": 100,
+    "height": 60,
+    "widthExpr": "w",
+    "heightExpr": "h * 0.6",
+    "title": "Corner Rounded Rectangle",
+    "styleSuffix": "corner_round_rect;dx=6;whiteSpace=wrap;"
+  },
+  "mxgraph.basic.cylinder3": {
+    "width": 60,
+    "height": 80,
+    "widthExpr": "60",
+    "heightExpr": "80",
+    "title": "Cylinder Stack",
+    "styleSuffix": "cylinder3"
+  },
+  "mxgraph.basic.diag_round_rect": {
+    "width": 100,
+    "height": 60,
+    "widthExpr": "w",
+    "heightExpr": "h * 0.6",
+    "title": "Diagonal Rounded Rectangle",
+    "styleSuffix": "diag_round_rect;dx=6;whiteSpace=wrap;"
+  },
+  "mxgraph.basic.diag_snip_rect": {
+    "width": 100,
+    "height": 60,
+    "widthExpr": "w",
+    "heightExpr": "h * 0.6",
+    "title": "Diagonal Snip Rectangle",
+    "styleSuffix": "diag_snip_rect;dx=6;whiteSpace=wrap;"
+  },
+  "mxgraph.basic.diag_stripe": {
+    "width": 100,
+    "height": 60,
+    "widthExpr": "w",
+    "heightExpr": "h * 0.6",
+    "title": "Diagonal Stripe",
+    "styleSuffix": "diag_stripe;dx=10;"
+  },
+  "mxgraph.basic.document": {
+    "width": 100,
+    "height": 100,
+    "widthExpr": "w",
+    "heightExpr": "h",
+    "title": "Document",
+    "styleSuffix": "document"
+  },
+  "mxgraph.basic.donut": {
+    "width": 100,
+    "height": 100,
+    "widthExpr": "w",
+    "heightExpr": "h",
+    "title": "Donut",
+    "styleSuffix": "donut;dx=25;"
+  },
+  "mxgraph.basic.drop": {
+    "width": 70,
+    "height": 100,
+    "widthExpr": "w * 0.7",
+    "heightExpr": "h",
+    "title": "Drop",
+    "styleSuffix": "drop"
+  },
+  "mxgraph.basic.flash": {
+    "width": 60,
+    "height": 100,
+    "widthExpr": "w * 0.6",
+    "heightExpr": "h",
+    "title": "Flash",
+    "styleSuffix": "flash"
+  },
+  "mxgraph.basic.frame": {
+    "width": 100,
+    "height": 60,
+    "widthExpr": "w",
+    "heightExpr": "h * 0.6",
+    "title": "Frame",
+    "styleSuffix": "frame;dx=10;whiteSpace=wrap;"
+  },
+  "mxgraph.basic.frame_corner": {
+    "width": 100,
+    "height": 60,
+    "widthExpr": "w",
+    "heightExpr": "h * 0.6",
+    "title": "Frame Corner",
+    "styleSuffix": "frame_corner;dx=10;whiteSpace=wrap;"
+  },
+  "mxgraph.basic.half_circle": {
+    "width": 100,
+    "height": 50,
+    "widthExpr": "w",
+    "heightExpr": "h * 0.5",
+    "title": "Half Circle",
+    "styleSuffix": "half_circle"
+  },
+  "mxgraph.basic.heart": {
+    "width": 100,
+    "height": 100,
+    "widthExpr": "w",
+    "heightExpr": "h",
+    "title": "Heart",
+    "styleSuffix": "heart"
+  },
+  "mxgraph.basic.isocube": {
+    "width": 100,
+    "height": 100,
+    "widthExpr": "w",
+    "heightExpr": "h",
+    "title": "Isometric Cube",
+    "styleSuffix": "isocube"
+  },
+  "mxgraph.basic.layered_rect": {
+    "width": 100,
+    "height": 60,
+    "widthExpr": "w",
+    "heightExpr": "h * 0.6",
+    "title": "Layered Rectangle",
+    "styleSuffix": "layered_rect;dx=10;outlineConnect=0;whiteSpace=wrap;"
+  },
+  "mxgraph.basic.loud_callout": {
+    "width": 100,
+    "height": 60,
+    "widthExpr": "w",
+    "heightExpr": "h * 0.6",
+    "title": "Loud Callout",
+    "styleSuffix": "loud_callout"
+  },
+  "mxgraph.basic.message": {
+    "width": 60,
+    "height": 40,
+    "widthExpr": "60",
+    "heightExpr": "40",
+    "title": "Message",
+    "styleSuffix": "message"
+  },
+  "mxgraph.basic.moon": {
+    "width": 75,
+    "height": 100,
+    "widthExpr": "w * 0.75",
+    "heightExpr": "h",
+    "title": "Moon",
+    "styleSuffix": "moon"
+  },
+  "mxgraph.basic.no_symbol": {
+    "width": 100,
+    "height": 100,
+    "widthExpr": "w",
+    "heightExpr": "h",
+    "title": "No Symbol",
+    "styleSuffix": "no_symbol"
+  },
+  "mxgraph.basic.obtuse_triangle": {
+    "width": 100,
+    "height": 70,
+    "widthExpr": "w",
+    "heightExpr": "h * 0.7",
+    "title": "Obtuse Triangle",
+    "styleSuffix": "obtuse_triangle;dx=0.25;"
+  },
+  "mxgraph.basic.octagon2": {
+    "width": 100,
+    "height": 100,
+    "widthExpr": "w",
+    "heightExpr": "h",
+    "title": "Octagon",
+    "styleSuffix": "octagon2;align=center;verticalAlign=middle;dx=15;"
+  },
+  "mxgraph.basic.orthogonal_triangle": {
+    "width": 100,
+    "height": 70,
+    "widthExpr": "w",
+    "heightExpr": "h * 0.7",
+    "title": "Orthogonal Triangle",
+    "styleSuffix": "orthogonal_triangle"
+  },
+  "mxgraph.basic.oval_callout": {
+    "width": 100,
+    "height": 60,
+    "widthExpr": "w",
+    "heightExpr": "h * 0.6",
+    "title": "Oval Callout",
+    "styleSuffix": "oval_callout"
+  },
+  "mxgraph.basic.partConcEllipse": {
+    "width": 100,
+    "height": 100,
+    "widthExpr": "w",
+    "heightExpr": "h",
+    "title": "Partial Concentric Ellipse",
+    "styleSuffix": "partConcEllipse;startAngle=0.25;endAngle=0.1;arcWidth=0.5;"
+  },
+  "mxgraph.basic.partial": {
+    "width": 120,
+    "height": 60,
+    "widthExpr": "w * 1.2",
+    "heightExpr": "h * 0.6",
+    "title": "Partial Rectangle",
+    "styleSuffix": "partial"
+  },
+  "mxgraph.basic.patternFillRect": {
+    "width": 120,
+    "height": 60,
+    "widthExpr": "w * 1.2",
+    "heightExpr": "h * 0.6",
+    "title": "Rectangle with diagonal fill",
+    "styleSuffix": "patternFillRect;fillStyle=diag;step=5;fillStrokeWidth=0.2;fillStrokeColor=#dddddd;"
+  },
+  "mxgraph.basic.pentagon": {
+    "width": 100,
+    "height": 90,
+    "widthExpr": "w",
+    "heightExpr": "h * 0.9",
+    "title": "Pentagon",
+    "styleSuffix": "pentagon"
+  },
+  "mxgraph.basic.pie": {
+    "width": 100,
+    "height": 100,
+    "widthExpr": "w",
+    "heightExpr": "h",
+    "title": "Pie",
+    "styleSuffix": "pie;startAngle=0.2;endAngle=0.9;"
+  },
+  "mxgraph.basic.plaque": {
+    "width": 100,
+    "height": 60,
+    "widthExpr": "w",
+    "heightExpr": "h * 0.6",
+    "title": "Plaque",
+    "styleSuffix": "plaque;dx=6;whiteSpace=wrap;"
+  },
+  "mxgraph.basic.plaque_frame": {
+    "width": 100,
+    "height": 60,
+    "widthExpr": "w",
+    "heightExpr": "h * 0.6",
+    "title": "Plaque Frame",
+    "styleSuffix": "plaque_frame;dx=10;whiteSpace=wrap;"
+  },
+  "mxgraph.basic.pointed_oval": {
+    "width": 50,
+    "height": 100,
+    "widthExpr": "w * 0.5",
+    "heightExpr": "h",
+    "title": "Pointed Oval",
+    "styleSuffix": "pointed_oval"
+  },
+  "mxgraph.basic.polygon": {
+    "width": 100,
+    "height": 100,
+    "widthExpr": "w",
+    "heightExpr": "h",
+    "title": "Polygon",
+    "styleSuffix": "polygon;polyCoords=[[0.25,0],[0.75,0],[1,0.25],[1,0.75],[0.75,1],[0.25,1],[0,0.75],[0,0.25]];polyline=0;"
+  },
+  "mxgraph.basic.pyramid": {
+    "width": 100,
+    "height": 100,
+    "widthExpr": "w",
+    "heightExpr": "h",
+    "title": "Pyramid",
+    "styleSuffix": "pyramid;dx1=0.4;dx2=0.6;dy1=0.9;dy2=0.8;"
+  },
+  "mxgraph.basic.rect": {
+    "width": 120,
+    "height": 60,
+    "widthExpr": "w * 1.2",
+    "heightExpr": "h * 0.6",
+    "title": "Partial Rectangle",
+    "styleSuffix": "rect;fillColor2=none;strokeWidth=1;size=20;indent=5;"
+  },
+  "mxgraph.basic.rectCallout": {
+    "width": 100,
+    "height": 60,
+    "widthExpr": "w",
+    "heightExpr": "h * 0.6",
+    "title": "Rectangular Callout",
+    "styleSuffix": "rectCallout;dx=30;dy=15;boundedLbl=1;"
+  },
+  "mxgraph.basic.roundRectCallout": {
+    "width": 100,
+    "height": 60,
+    "widthExpr": "w",
+    "heightExpr": "h * 0.6",
+    "title": "Rounded Rectangular Callout",
+    "styleSuffix": "roundRectCallout;dx=30;dy=15;size=5;boundedLbl=1;"
+  },
+  "mxgraph.basic.rounded_frame": {
+    "width": 100,
+    "height": 60,
+    "widthExpr": "w",
+    "heightExpr": "h * 0.6",
+    "title": "Rounded Frame",
+    "styleSuffix": "rounded_frame;dx=10;whiteSpace=wrap;"
+  },
+  "mxgraph.basic.shaded_button": {
+    "width": 100,
+    "height": 60,
+    "widthExpr": "w",
+    "heightExpr": "h * 0.6",
+    "title": "Button (shaded)",
+    "styleSuffix": "shaded_button"
+  },
+  "mxgraph.basic.smiley": {
+    "width": 100,
+    "height": 100,
+    "widthExpr": "w",
+    "heightExpr": "h",
+    "title": "Smiley",
+    "styleSuffix": "smiley"
+  },
+  "mxgraph.basic.star": {
+    "width": 100,
+    "height": 95,
+    "widthExpr": "w",
+    "heightExpr": "h * 0.95",
+    "title": "Star",
+    "styleSuffix": "star"
+  },
+  "mxgraph.basic.sun": {
+    "width": 100,
+    "height": 100,
+    "widthExpr": "w",
+    "heightExpr": "h",
+    "title": "Sun",
+    "styleSuffix": "sun"
+  },
+  "mxgraph.basic.three_corner_round_rect": {
+    "width": 100,
+    "height": 60,
+    "widthExpr": "w",
+    "heightExpr": "h * 0.6",
+    "title": "Rounded Rectangle (three corners)",
+    "styleSuffix": "three_corner_round_rect;dx=6;whiteSpace=wrap;"
+  },
+  "mxgraph.basic.tick": {
+    "width": 85,
+    "height": 100,
+    "widthExpr": "w * 0.85",
+    "heightExpr": "h",
+    "title": "Tick",
+    "styleSuffix": "tick"
+  },
+  "mxgraph.basic.wave2": {
+    "width": 100,
+    "height": 60,
+    "widthExpr": "w",
+    "heightExpr": "h * 0.6",
+    "title": "Wave",
+    "styleSuffix": "wave2;dy=0.3;"
+  },
+  "mxgraph.basic.x": {
+    "width": 100,
+    "height": 100,
+    "widthExpr": "w",
+    "heightExpr": "h",
+    "title": "X",
+    "styleSuffix": "x"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "ext": {
+    "width": 120,
+    "height": 80,
+    "title": "Double Rectangle",
+    "style": "shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;"
+  },
+  "ext_2": {
+    "width": 120,
+    "height": 80,
+    "title": "Double Rounded Rectangle",
+    "style": "shape=ext;double=1;rounded=1;whiteSpace=wrap;html=1;"
+  },
+  "doubleEllipse": {
+    "width": 100,
+    "height": 60,
+    "title": "Double Ellipse",
+    "style": "ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;"
+  },
+  "ext_3": {
+    "width": 80,
+    "height": 80,
+    "title": "Double Square",
+    "style": "shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;"
+  },
+  "doubleEllipse_2": {
+    "width": 80,
+    "height": 80,
+    "title": "Double Circle",
+    "style": "ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;aspect=fixed;"
+  },
+  "isoCube2": {
+    "width": 90,
+    "height": 100,
+    "title": "Isometric Cube",
+    "style": "html=1;whiteSpace=wrap;shape=isoCube2;backgroundOutline=1;isoAngle=15;"
+  },
+  "isoRectangle": {
+    "width": 150,
+    "height": 90,
+    "title": "Isometric Square",
+    "style": "html=1;whiteSpace=wrap;aspect=fixed;shape=isoRectangle;"
+  },
+  "curlyBracket": {
+    "width": 20,
+    "height": 120,
+    "title": "Left Curly Bracket",
+    "style": "shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;"
+  },
+  "curlyBracket_2": {
+    "width": 20,
+    "height": 120,
+    "title": "Right Curly Bracket",
+    "style": "shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;"
+  },
+  "crossbar": {
+    "width": 120,
+    "height": 20,
+    "title": "Horizontal Crossbar",
+    "style": "shape=crossbar;whiteSpace=wrap;html=1;rounded=1;"
+  },
+  "crossbar_2": {
+    "width": 20,
+    "height": 120,
+    "title": "Vertical Crossbar",
+    "style": "shape=crossbar;whiteSpace=wrap;html=1;rounded=1;direction=south;"
+  },
+  "partialRectangle": {
+    "width": 120,
+    "height": 60,
+    "title": "Partial Rectangle",
+    "style": "shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=none;"
+  },
+  "partialRectangle_2": {
+    "width": 120,
+    "height": 60,
+    "title": "Partial Rectangle",
+    "style": "shape=partialRectangle;whiteSpace=wrap;html=1;bottom=0;top=0;fillColor=none;"
+  },
+  "partialRectangle_3": {
+    "width": 120,
+    "height": 60,
+    "title": "Partial Rectangle",
+    "style": "shape=partialRectangle;whiteSpace=wrap;html=1;bottom=0;right=0;fillColor=none;"
+  },
+  "partialRectangle_4": {
+    "width": 120,
+    "height": 60,
+    "title": "Partial Rectangle",
+    "style": "shape=partialRectangle;whiteSpace=wrap;html=1;bottom=1;right=1;left=1;top=0;fillColor=none;routingCenterX=-0.5;"
+  },
+  "waypoint": {
+    "width": 20,
+    "height": 20,
+    "title": "Waypoint",
+    "style": "shape=waypoint;sketch=0;fillStyle=solid;size=6;pointerEvents=1;points=[];fillColor=none;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;"
+  }
+}
