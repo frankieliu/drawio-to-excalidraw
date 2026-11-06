@@ -32,7 +32,7 @@
 ## File Structure
 
 ```
-Current directory: /Users/frankliu/Projects/drawio-to-excalidraw
+Current directory: /Users/frankliu/Projects/diagrams/drawio-to-excalidraw
 
 Key Files:
 ├── mx-shape-to-excalidrawlib.js          # Main converter script

@@ -32,7 +32,7 @@ curl http://127.0.0.1:8080/
 ### 2. Install Dependencies (if not already installed)
 
 ```bash
-cd /Users/frankliu/Projects/drawio-to-excalidraw
+cd /Users/frankliu/Projects/diagrams/drawio-to-excalidraw
 npm install
 ```
 
@@ -424,9 +424,9 @@ git push origin main
 
 ## Contact Information
 
-**Project location:** `/Users/frankliu/Projects/drawio-to-excalidraw`
+**Project location:** `/Users/frankliu/Projects/diagrams/drawio-to-excalidraw`
 
-**Draw.io source:** `/Users/frankliu/Projects/drawio-desktop/drawio/src/main/webapp`
+**Draw.io source:** `/Users/frankliu/Projects/diagrams/drawio-desktop/drawio/src/main/webapp`
 
 **Plan file:** `~/.claude/plans/wondrous-swimming-parasol.md`
 
